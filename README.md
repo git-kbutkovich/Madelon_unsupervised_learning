@@ -1,12 +1,17 @@
 # Project 3: Feature Selection + Classification
 
+DUE NOVEMBER 11 !!!!!!
+
 ### Domain and Data
 
 You're working as a data scientist with a research firm. You're firm is bidding on a big project that will involve working with thousands or possibly tens of thousands of features. You know it will be impossible to use conventional feature selection techniques. You propose that a way to win the contract is to demonstrate a capacity to identify relevant features using machine learning. Your boss says, "Great idea. Write it up." You figure that working with a synthetic dataset such as [Madelon](https://archive.ics.uci.edu/ml/datasets/Madelon) is an excellent way to demonstrate your abilities. 
 
 #### Requirement
 
-This work must be done on AWS.
+This work must be done on AWS.  Must be aware of engineering decisions you make due to limited resources & bandwidth???
+
+engineering-speaking, can our t2micros handle a dataset with 20k rows and 500 columns...?  Start with t2-micro, according to Josh!!!  What sort of memory foortprint can we execute?
+
 
 ### Problem Statement
 
@@ -22,14 +27,21 @@ Your final product will consist of:
 1. A prepared report
 2. A series of Jupyter notebooks to be used to control your pipelines
 
+-Josh recommends to write report in jupyter noteboods and use pandoc (sp?) to export from Jupyter to PDF.
+
 ### Tasks
 
 #### Data Manipulation
 
 You should do substantive work on at least six subsets of the data. 
 
-- 3 sets of 10% of the data from the UCI Madelon set
-- 3 sets of 10% of the data from the Madelon set made available by your instructors
+- 3 sets of 10% of the data from the UCI Madelon set  (the 10% = 1/10 of the 4.4k instances/rows, right?)
+
+- 3 sets of 10% of the data from the Madelon set made available by your instructors  (the 10% = 1/10 of the 4.4k instances/rows, right?)
+
+Each pipieline you run on the smaller dataset, you could run on the larger dataset.
+
+-6 subsets total
 
 ##### Prepared Report
 
@@ -54,6 +66,8 @@ Your report should:
 	- k nearest neighbors
 	- support vector classifier
 - in order to do this, you will need to set a high `C` value in order to perform minimal regularization, in the case of logistic regression and support vector classifier.
+
+***in order to make them a naive classification, must use a high C-value(1e10).  High C-value mean little regularization.
 
 ##### Jupyter Notebook, Step 2 - Identify Features
 - Build feature selection pipelines using at least three different techniques

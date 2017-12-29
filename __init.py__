@@ -1,0 +1,35 @@
+import csv
+from IPython.display import display
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, PolynomialFeatures
+
+from sklearn.decomposition import PCA
+from sklearn.feature_selection import SelectKBest, f_regression, SelectPercentile, f_classif
+
+from sklearn.pipeline import make_pipeline
+from sklearn.pipeline import Pipeline
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import GridSearchCV
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import svm
+from sklearn.svm import SVC
+
+
+from sklearn.datasets import samples_generator
+from sklearn.metrics import classification_report
+
+
+
+DB_trimmed_df3 = pd.read_pickle('pickle_jar/DB_trimmed_df3.p')
+DB_target = pd.read_pickle('pickle_jar/DB_target.p')
+#feature_list = pd.read_pickle('pickle_jar/feature_list.p')
+
